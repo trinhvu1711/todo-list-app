@@ -1,11 +1,10 @@
-import Button from './Button'
+const Input = ({ inputValue, setInputValue }) => {
+  const handleInputValue = (e) => {
+    setInputValue(e.target.value)
+  }
 
-const Input = () => {
   return (
-    <div className="w-full min-h-[40px] border border-indigo-400  bg-transparent flex items-center mb-8">
-      <input type="text" className="w-full min-h-[40px] px-3 bg-transparent outline-none" />
-      <Button></Button>
-    </div>
+    <input type="text" className="w-full min-h-[40px] px-3 bg-transparent outline-none" onChange={handleInputValue} value={inputValue} placeholder='Enter note' />
   )
 }
 

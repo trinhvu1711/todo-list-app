@@ -1,6 +1,7 @@
-const Button = () => {
+const Button = ({ onClick, label }) => {
   return (
-    <button className="h-full p-2 font-semibold bg-indigo-400 min-w-fit">Add Task</button>
+    <button onClick={onClick} className="h-full p-2 font-semibold bg-indigo-400 min-w-fit">{label}</button>
+
   )
 }
 
